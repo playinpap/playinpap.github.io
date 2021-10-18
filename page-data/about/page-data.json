@@ -1,5 +1,5 @@
 {
-    "componentChunkName": "component---packages-themes-gatsby-theme-flexiblog-minimal-v-2-src-pages-about-jsx",
+    "componentChunkName": "component---src-elegantstack-gatsby-theme-flexiblog-minimal-v-2-pages-about-jsx",
     "path": "/about/",
     "result": {"pageContext":{"paginatePostsPage":true,"basePath":"/","services":{"algolia":false,"mailchimp":false,"disqus":false,"graphComment":false,"facebookComment":false},"siteUrl":null,"darkMode":true,"includeExcerpt":true,"includeTimeToRead":true,"includeTableOfContents":true,"imageQuality":75}},
     "staticQueryHashes": ["1992822086","3117598128"]}
