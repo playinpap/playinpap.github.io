@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---cache-dev-404-page-js",
-    "path": "/dev-404-page/",
-    "result": {"data":{"allSiteFunction":{"nodes":[]},"allSitePage":{"nodes":[{"path":"/"},{"path":"/notice-for-author/"},{"path":"/category/notice/"},{"path":"/tag/"},{"path":"/author/bonnie/"},{"path":"/404.html"},{"path":"/404/"},{"path":"/authors/"},{"path":"/about/"},{"path":"/contact/"},{"path":"/2021-fw-member-recruitment/"},{"path":"/visualization-posting-sample/"},{"path":"/sample-korean-title/"}]}},"pageContext":{"paginatePostsPage":true,"basePath":"/","services":{"algolia":false,"mailchimp":false,"disqus":true,"graphComment":false,"facebookComment":false},"siteUrl":null,"darkMode":true,"includeExcerpt":true,"includeTimeToRead":true,"includeTableOfContents":true,"imageQuality":75}},
-    "staticQueryHashes": []}
