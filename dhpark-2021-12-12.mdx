@@ -1,0 +1,142 @@
+---
+title: 볼수록 안좋은 Vanity Metric, 그렇다면 어떻게 구분해야 할까?
+slug: vanity-metric-part1
+category: metric
+author: "박동혁"
+thumbnail : ./cover-png
+tags: ["#데이터분석","#초급", "#허상지표"]
+date: 2021-12-12
+private: false
+---
+
+## _볼수록 안좋은 Vanity Metric, 그렇다면 어떻게 구분해야 할까?_
+
+
+### 개요
+
+- '단순히 그래프 기울기가 높아졌다'가 아니라 '앞으로 어떤 일을 할까'에 대한 단서를 찾아봅시다.
+- 우리의 업무방향의 변화가 필요한지에 대한 과감한 질문이 생길수록 더욱 좋습니다.
+- 'Product-Led' 한 의사결정을 이끄는 사소한 습관으로도 Vanity Metric에 빠질 염려는 줄어듭니다.
+
+### 지표에 대한 3 Why
+
+지난 포스팅에선, '열심히'하려는 마인드가 오히려 Vanity Metric만 보고 전력질주하는 아이러니한 결과를 가져올 수 있다는 이야기를 나눠봤습니다.
+
+앞으로라도 그러지 않기 위해 지표를 올바르게 식별하는 방법은 있을지, 머리로는 알지만 현장에선 똑같은 실수를 반복하지 않으려면 어떻게 할지에 대한 이야기를 함께 해보려 합니다.
+
+Vanity Metric의 반대 개념으로, 성장을 이끌어내는 유리한 지표는 '실질 지표(Actionable Metric)'라고 규정하게 됩니다.
+'홍보하기 좋은 지표', '겉으로 보기 좋은 지표'를 경계하라는 한마디만으로 Actionable Metric을 찾기는 모호하게 들릴 수 있습니다.
+
+그렇기 때문에 지금 전사적으로 집중하는 수치가 과연 유의미한지 간략히 진단하는 3가지 기준(3A test)을 설명드리겠습니다.
+
+![](https://learn.g2.com/hs-fs/hubfs/vanity%20metrics-1.png?width=1500&name=vanity%20metrics-1.png)
+출처 — [G2.com](http://www.cctvnews.co.kr/news/articleView.html?idxno=213457)
+
+##### 1. 후속 액션에 대한 인사이트를 제공하나요?
+각각의 서비스가 처한 상황이 다르기 때문에, 집중해야 하는 지표가 서로 달라질 수밖에 없는 것은 사실입니다.
+하지만 지표를 선정하고 중요도를 평가하는 과정에서 **'지표변화 때문에 우리가 할일이 더 생기나요? ** 와 같은 질문은 꼭 필요합니다.
+
+![](http://www.performancemagazine.org/wp-content/uploads/Be-smart-about-SMART-goals-SMART-objectives-SMART-KPIs-and-smartKPIs-10.png)
+출처 - [Performance Magazine](https://www.performancemagazine.org/be-smart-about-smart-goals-smart-objectives-smart-kpis-and-smartkpis/)
+
+흔히 SMART KPI라는 방식으로도 지표의 중요성/우선순위를 고려하게 되는데, 
+- Specific : 특정 이벤트에 구체적으로 집중할 수 있는지  
+- Measurable : 수치화할 수 있는지 
+- Achievable : 성취할 수 있는 방향의 변화를 추구하는지  
+- Realistic : 그 변화의 모멘텀은 현실적인 범위인지, 우리 비즈니스와 관련있는 내용인지
+- Time-bound : 특정 기한 내에 실행할 수 있다는 계획 설정이 가능한지
+
+이런 5가지 범주를 기준으로 하여 가장 명확히 답할 수 있는 지표가 있다면 집중해도 좋습니다.
+
+위 내용을 바탕으로, 우리는 지표의 중요성/우선순위 검증을 단 한마디의 질문으로 시도할 수 있습니다.
+
+###### [우리의 목표]를 [설정한 지표]로서 [특정한 기간 안]에 [양적으로 몇%만큼] 증가시키며, [비용 효율은 몇%만큼] 개선시킬 수 있나요?
+
+서비스의 핵심 목표가 B2B 리드의 창출인 상태에서, B2C 고객의 방문 증가가 그것을 도울 수 있는지 고민중이라면
+- 리테일 고객의 방문 & B2B 리드 증가의 상관관계 검증을 해야할 것입니다. (Realistic/Specific)
+- 그리고 그 상관관계도가 통계적으로 유의미한지도 증명할 수 있어야 합니다. (Measurable/Achievable)
+- 상관관계도에 의해 수행한 각종 액션이 실제 어느 정도의 Impact를 주는지 확인할 수 있어야 합니다. (Measurable/Realistic)
+- 상관관계 & 지표 간 Impact 도출까지 확인됐다면, 그를 통해 어떤 프로젝트를 어떤 방식으로 수행하면 좋을지 검토합니다. (Time-bound/Achievable)
+
+고려할 요인들의 성격이 복합적이지만, 단 한가지 측면에 대해서라도 긍정적인 답변을 이끌어낼 수 없다면 우린 그것을 Vanity Metric이라고 간주할 수 있습니다.
+
+##### 2. 반복 수행해도 동일한 결과를 만들어낼 수 있나요?
+
+SMART KPI에서 이야기한 내용들의 연장선상으로, 1번의 절차로 특정 캠페인/프로젝트에 대한 계획을 수립할 수 있었습니다.
+하지만 그것이 반복수행을 했을 때 꾸준히 동일한 결과를 가져왔는지에 대해 질문해볼 필요가 있습니다.
+
+만약 우리도 모르는 사이에 트래픽에 영향을 주는 외부 요인으로 이례적인 결과를 가져온 시기에 성과 분석을 했다면,
+프로젝트/스프린트/캠페인의 반복수행이 똑같은 결과를 가져올 거라 보장하기는 어렵습니다.
+
+![](https://m.foolcdn.com/media/the-blueprint/images/vanity-metrics-01-site-traffic.width-800.png)
+출처 - [Blueprint](https://www.fool.com/the-blueprint/vanity-metrics/)
+
+일시적으로 발생한 세션 급등이 기대감을 줄 수 있는 것은 사실입니다.
+하지만, 그것이 반복적으로 일어날 거라는 확신/보장이 되어있지 않다면, 
+세션수 증가가 곧 비즈니스 목표를 근접하게 하는 확실한 driver라고 말할 수 없습니다.
+
+그리고 세션수 증가를 유도한 특정한 외부 요인이 반복되어야 한다고 주장하는 것도 조심스러울 수 있습니다.
+
+특정 유명인의 추천으로 인해 컨텐츠에 대한 바이럴이 일어나 구독&공유가 증가했다고 가정해봅시다.
+사람들의 인식 속에서 '이미 누군가의 인위적인 Push가 있었던 것' 으로 자리잡으면 반복적인 효과를 누리기 어려운 것이 일반적입니다. 오히려 역효과를 낳는 경우가 많기도 합니다.
+
+그러다보니 이것은 결국 특정한 Action이 내/외부의 신뢰도를 충분히 쌓아둔 것인지에 대한 질문으로 이어지곤 합니다.
+
+##### 3. 수집된 결과값들을 확실히 믿을 수 있나요?
+
+최근에 알고리즘 개편을 단행한 인스타그램의 각종 이슈들을 떠올려보면 더욱 확실히 체감할 수 있습니다.
+**'인스타그램은 팔로워 기반의 SNS다'** 라는 단순한 명제 때문에 팔로워를 늘리는 것에만 집중하다보면,
+**'나와 소통하는 사람이 누구인가'**에 대한 문제를 중요하게 생각하지 않을 수 있습니다.
+
+
+**<인스타 팔로워를 사면 안되는 이유.jpg>**
+![](https://influencermarketinghub.com/wp-content/uploads/2018/08/fake-comments.png)
+출처 - [Influencermarketinghub](https://influencermarketinghub.com/why-buying-instagram-followers-is-a-really-bad-idea/)
+
+[Brain Balfour](https://brianbalfour.com/essays/growth-principle-two-seek-authentic-growth) 도 이런 문제에 대해서 아주 오래 전부터 지적해왔습니다. 절대적인 Volume보다도 관련성, Context에 대한 상호 기대수준이 일치하느냐를 더 중시하고 있는 것입니다.
+
+
+반복수행, 상관관계와 더불어 실제로 벌어지는 커뮤니케이션의 수준까지 고려할 때 우리의 OMTM은 분명해질 수 있습니다.
+이러다보니 그 과정이 굉장히 지난할 수 있고, 수많은 예시가 있더라도 꼭 획일화된 Metric에 올인해야 하는 것도 아닙니다.
+때로는 애지중지해오던 것들을 포기해야 하는 순간도 찾아옵니다.
+
+Microsoft는 5~6년 전부터 Xbox One의 분기별 재무보고에서 '콘솔기기 판매량'이라는 수치를 과감히 제외하기로 했습니다.
+"단일기기의 판매가 생태계 확장을 결정하는 유의미한 변수가 아님을 깨달았기 때문" 이라는 Xbox 총괄 [Phil Spencer](https://www.gamespot.com/articles/how-microsoft-will-report-xbox-numbers-going-forwa/1100-6431667/)의 답변과 함께, Xbox Live의 활성화에 주력하며 더욱 깊이있는 유저 상호작용에 Deep-Dive하게 된 것이 중요한 사례입니다.
+
+![](https://blog.sageintacct.com/hs-fs/hubfs/1_1%20SaaS%20Investors.jpg?width=2700&name=1_1%20SaaS%20Investors.jpg)
+출처 - [sageIntacct](https://blog.sageintacct.com/blog/top-5-saas-metrics-investors-want-to-see-by-venture-stage)
+
+우리의 OMTM을 설정하는 기준은 이따금 투자 라운드에 의해 바뀔 수도 있고, 내부의 성과 평가 루틴에 따라 YoY 성장률 / MoM 성장률이 될 수도 있고, 업데이트로 인한 사용성 평가를 위한 Bounce rate/Conversion rate 변화가 될 수도 있습니다.
+
+![](https://www.inturact.com/hs-fs/hubfs/Screen%20Shot%202020-01-29%20at%2011.08.30%20AM.png?width=1545&name=Screen%20Shot%202020-01-29%20at%2011.08.30%20AM.png)
+출처 - [Inturact](https://www.inturact.com/blog/saas-actionable-metrics-a-guide-to-tracking-aarrr)
+
+실질 지표를 찾기 위해 중요한 것은 
+
+- '모든 지표를 충족하려는 순간 아무것도 개선시키지 못한다'는 것에 대한 빠른 수용
+- 초기 Onboarding / Lock-in 유도 / 외부 확산 중 제일 중요하게 생각하는 내부 Agenda의 수립 
+- '어떠한 문제를 해결하기 위해 어떠한 지표를 향상시키는 프로젝트를 어느 기간에 걸쳐 시도한다' 는 구조화된 의사결정
+
+입니다.
+
+Lean&Agile 이 어느새 특정 Feature를 Boost하기 위한 단순 공정의 하나로 변하는 것을 막기 위해서라면 
+**'뭐가 언제 개발되며, 스프린트에 의한 우리의 스토리 스코어는 몇점인가'** 와 같은 기능 기반의 접근보다 
+**'그게 정말 문제를 해결해줄 수 있고, 우리의 미션과 부합하느냐'** 로 비전 중심의 접근이 필요합니다.
+
+Product-led 조직의 커뮤니케이션 방식은 이런 차이를 가져옵니다.
+| 전 | 후 |
+| ------ | ------ |
+| 주어진 기능을 개선한다 | 고객의 니즈,문제점을 해결한다 |
+| 서비스를 비용요인으로 생각한다 | 서비스를 성장동력으로 생각한다 |
+| 기술스택과 배포환경을 중시한다 | 우리의 미션과 사용자경험을 중시한다 |
+| 내 생각으로 개발을 먼저 하고난 후 검증한다 | 문제점을 발견하고, 해결해줄 수 있는 방향으로 조정한다 |
+| 부서별 기능 분리 | 부서간 협업 활성화 |
+| 피드백&의견교환 느림/내부 추정에 의존 | 피드백&의견교환 빠름/구조화된 의사결정  |
+| 페이지뷰 & 클릭수 중시 | 고객경험 동시관리 & 잦은 상호작용 및 소비자 피드백 중시  |
+출처 - [Amplitude](https://amplitude.com/north-star/about-the-north-star-framework)
+
+이번 포스팅을 통해, '우리가 과연 Vanity Metric에 빠진걸까?' 에 대한 자체 검증, 이를 벗어나기 위한 간단한 체크 요령에 대해 살펴봤습니다.
+
+다음 내용을 통해서는, 여기서 확실히 풀리지 않은 의문들  
+**ex> '상관관계 검증은 어떻게 해낸 것일까?', '지표는 언제 어떻게 어느 주기로 바꿔서 집중하는 걸까?' 등**
+을 주제로 케이스를 살펴보겠습니다.
