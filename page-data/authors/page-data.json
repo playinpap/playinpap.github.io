@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---packages-blog-gatsby-blog-pages-src-pages-authors-jsx",
-    "path": "/authors/",
-    "result": {"pageContext":{"paginatePostsPage":true,"basePath":"/","services":{"algolia":false,"mailchimp":false,"disqus":true,"graphComment":false,"facebookComment":false},"siteUrl":"https://playinpap.github.io","darkMode":true,"includeExcerpt":true,"includeTimeToRead":true,"includeTableOfContents":true,"imageQuality":75}},
-    "staticQueryHashes": ["1992822086","2313160350","2918496967","2981853053","4235339838","4240507859"]}
+{"componentChunkName":"component---packages-blog-gatsby-blog-pages-src-pages-authors-jsx","path":"/authors/","result":{"pageContext":{"paginatePostsPage":true,"basePath":"/","services":{"algolia":false,"mailchimp":false,"disqus":true,"graphComment":false,"facebookComment":false},"siteUrl":"https://playinpap.github.io","darkMode":true,"includeExcerpt":true,"includeTimeToRead":true,"includeTableOfContents":true,"imageQuality":75}},"staticQueryHashes":["1992822086","2313160350","2918496967","2981853053","4235339838","4240507859"]}
